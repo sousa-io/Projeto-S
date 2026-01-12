@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Entre linhas e pontos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF7F2;
+    color: #3F3A36;
+    line-height: 1.8;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(250, 247, 242, 0.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #EFE6D8;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.80);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-principal {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #B89B7A;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    margin-left: 25px;
+    font-size: 0.9rem;
+    color: #7A736D;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    color: #B89B7A;
+    transition: 0.4s;
+}
+
+/* botão mobile */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #B89B7A;
+}
+
+/* ===== SEÇÕES ===== */
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-weight: 400;
+    color: #B89B7A;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    color: #7A736D;
+}
+
+.processo {
+    text-align: center;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding-top: 180px;
+}
+
+#fundo-principal {
+    background-color: #EFE6D8;
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 5px 5px rgba(0,0,0,0.20);
+}
+
+/* ===== GALERIA ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.photo-box {
+    background-color: #EFE6D8;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B89B7A;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background-color: #EFE6D8;
+    border-radius: 30px;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.cta a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 40px;
+    background-color: #B89B7A;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.9rem;
+    color: #7A736D;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 85px;
+        right: 20px;
+        background-color: #FAF7F2;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav-container">
+
+        <div class="logo-area">
+            <img src="img/Gemini_Generated_Image_o3rb6o3rb6o3rb6o.png" alt="Logo" class="logo-principal">
+            <div class="logo">Entre linhas e pontos</div>
+        </div>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#historia">História</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#processo">Processo</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    </div>
+</header>
+
+<section id="inicio" class="hero">
+    <h1 id="fundo-principal">Peças em crochê feitas com calma e significado</h1>
+    <p>Cada ponto carrega tempo, cuidado e atenção aos detalhes.</p>
+</section>
+
+<section id="historia" class="processo">
+    <h2>Nossa história</h2>
+    <p>Entre linhas e pontos nasceu do amor pelo feito à mão.</p>
+</section>
+
+<section id="galeria">
+    <h2 class="processo">Algumas criações</h2>
+    <div class="gallery">
+        <div class="photo-box"> <img src="img/Mídia.jpg" alt=""></div>
+        <div class="photo-box"> <img src="img/Mídia (1).jpg" alt=""></div>
+        <div class="photo-box"> <img src="img/Mídia (2).jpg" alt=""></div>
+        <div class="photo-box"> <img src="img/Mídia (3).jpg" alt=""></div>
+    </div>
+</section>
+
+<section class="processo">
+    <h2>Como cada peça é feita</h2>
+    <p>Cada detalhe é pensado com carinho e dedicação.</p>
+</section>
+
+<section id="contato">
+    <div class="cta">
+        <h2>Vamos criar algo especial juntos?</h2>
+        <a href="https://wa.me/5563992607483" target="_blank">Chamar no WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 • Entre linhas e pontos <br>
+    Crochê artesanal feito com carinho
+    <div style="margin-top:20px;font-size:0.75rem;opacity:0.35;">
+        Desenvolvido por Thiago
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
